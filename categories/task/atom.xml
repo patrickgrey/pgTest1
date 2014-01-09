@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: task | ]]></title>
+  <link href="/categories/task/atom.xml" rel="self"/>
+  <link href="/"/>
+  <updated>2014-01-09T20:51:45+00:00</updated>
+  <id>/</id>
+  <author>
+    <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
+    
+  </author>
+  <generator uri="https://github.com/recurser/jekyll-plugins">Recurser</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[About tasks]]></title>
+    <link href="/task/2013/12/19/task-tasks.html"/>
+    <updated>2013-12-19T00:00:00+00:00</updated>
+    <id>/task/2013/12/19/task-tasks</id>
+    <content type="html"><![CDATA[<p>I want to better structure my workflow.</p>
+
+<p>I use my personal projects to learn things. In web development, there is a never ending stream of things to learn. Unfortunately, I have a terrible tendancy to get distracted by shiny things. So, when I should be doing one task, I find a tool or technique that I can use in another part of the project. I sometimes move onto that as the solution is something sexy.</p>
+
+<p>This slows my progress, muddles my workflow and probably reduces my learning.</p>
+
+<p>I decided to get better organised with a structured workflow.</p>
+
+<p>Tasks are a part of that workflow.</p>
+
+<p>Web design can be a very fluid process; I may see a chance to improve my design, implement it and this has a knock on effect elsewhere. I need to stop jumping about but retain the ability to react to improvements in a fairly fluid way.</p>
+
+<p>I started using tasks for that purpose:</p>
+
+<ul>
+<li>I create a task post to define the problem e.g. svg logo (I want to use SVG for my logo).</li>
+<li>A task should be a small enough chunk of work to complete quickly (a few hours) but large enough to be worthwhile documenting. If a task is too small, just mark it on git commit without a post.</li>
+<li>Task posts should be prefixed with &#39;task-&#39;</li>
+<li>I commit that to git as the task start.</li>
+<li>I continue with that task, and that task only, until it is complete or I have to abandon it. I document what I learn as I go to note handy techniques and useful links.</li>
+<li>On completion I commit to git to mark the end of the task.</li>
+</ul>
+
+<p>Extras:
+* If I find a technique or tool that is specifically useful, I will document that in its own additional post.
+* If some other part of the site is blocking this task or I REALLY need to move onto another thing, this documentation allows me to come back to the task with reasonable accuracy.</p>
+
+<p>Benefits:
+* I can note down where I get Open Source assets so I can correctly attribute them.</p>
+
+<p>As long as I keep the tasks in chunks that are small enough to complete but large enough to document, I think it will be worthwhile.</p>
+
+<p>Now to commit this...</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Create a SVG Logo with png fallback]]></title>
+    <link href="/task/2013/12/19/task-svg-logo.html"/>
+    <updated>2013-12-19T00:00:00+00:00</updated>
+    <id>/task/2013/12/19/task-svg-logo</id>
+    <content type="html"><![CDATA[<h2>Task: Add a responsive svg logo to my website that will show a png fallback in browsers that don&#39;t support svg. It should also act as an accessible link to the home page. Finally, I would also like to leave open the option to animate the svg with CSS once JavaScript is introduced to the site.</h2>
+
+<ul>
+<li>I couldn&#39;t access the svg if it was a background image on the link or in an <img> tag.</li>
+<li>I didn&#39;t like the mass of markup that inline SVG would add to the page and the inability to cahce it. I may have to revisit this approach though...</li>
+<li>I therefore opted to use the &lt;object&gt; tag with a fallback png inside it.
+
+<ul>
+<li><a href="http://css-tricks.com/using-svg/" title="CSS tricks article on SVG use.">http://css-tricks.com/using-svg/</a></li>
+<li>Unfortunately, the fallback doesn&#39;t show with IE8 - so I&#39;m considering using the span mentioned below to show a png in the background.</li>
+<li>This article was useful for getting svg to scale responsively: <a href="http://soqr.fr/testsvg/embed-svg-liquid-layout-responsive-web-design.php" title="soQR artivle on responsive svg images">http://soqr.fr/testsvg/embed-svg-liquid-layout-responsive-web-design.php</a></li>
+</ul></li>
+<li>There was a problem with Chrome that the link wasn&#39;t clickable so I had to add a span tag: <a href="http://soqr.fr/testsvg/svg-link-with-object.php" title="soQR.fr article about the need to use a span to make a link work">http://soqr.fr/testsvg/svg-link-with-object.php</a></li>
+<li>I still needed to get the IE8 logo working:
+
+<ul>
+<li>New style sheet just for IE8 and less, hidden by IE comments</li>
+<li>The text on the span was hidden using <a href="http://css-tricks.com/examples/ImageReplacement/" title="css tricks article on replacing text with images">http://css-tricks.com/examples/ImageReplacement/</a> and replaced with the logo. IE8 will show a fixed width layout.</li>
+</ul></li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Create SVG icons using a spritesheet and with png fallback]]></title>
+    <link href="/task/2013/12/19/task-svg-icons.html"/>
+    <updated>2013-12-19T00:00:00+00:00</updated>
+    <id>/task/2013/12/19/task-svg-icons</id>
+    <content type="html"><![CDATA[<h2>Task: I want to use icons for the lab section and the social media links on my site. A sprite sheet should be used to reduce network calls.</h2>
+
+<p>I was considering how to get scaled png fallbacks for svg to cope with retina screens. By scaled, I meant using the technique of creating highly optimised large images and then scaling them in half, which often helps  provide detail for retina screens it seems.</p>
+
+<p>However, then I realised that non SVG supporting browsers are likely to be pretty old and non retina. Therefore, the effort is unlikely to be worth it!</p>
+
+<p>No need to animate so can be background images. So, could we use :before/:after? Yes, works with IE8 too!</p>
+
+<p>So, create a sprite sheet SVG(?) and in the IE8 css file, replace that with a png sprite....</p>
+
+<p>For IE8 I created a fallback png worked. I also don&#39;t need to overwrite all the main css code for the :after psuedo element, only the background image url.</p>
+
+<p>For the contact links I initially created the icons before the li element and then I could position the link absolutely to line them up vertically. However, I then realised I wanted the icons to be selectable too. Now I have created the icons using :before on the link element but positioning the text to the ion is now difficult.</p>
+
+<p>Fixed with:</p>
+
+<p>line-height: 3em;
+vertical-align: top;</p>
+
+<p>The above didn&#39;t work for IE8 though!!</p>
+
+<p>I also tried absolute positioning, varying line heights and a mixture of vertical-align with no luck.</p>
+
+<p>Then I thought about putting the icon as a background-image to the link, thinking I had become too fixated on the pseudo element solutions. However, this still left me with vertical positioning problems.</p>
+
+<p>Then I added a span, which I wanted to avoid to keep my HTML clean. I used <a href="http://css-tricks.com/centering-in-the-unknown/" title="CSS tricks article on vertical centering using ghost elements">http://css-tricks.com/centering-in-the-unknown/</a> and that worked with IE8 as well. But I realised afterwards that the icon wasn&#39;t part of the link as I was creating the ghost element with the LI element:before. I finally used a span inside the link and got it working with IE8.</p>
+
+<p>This seemed the same as using the before pseudo element. In fact it was, I had found the right combination!</p>
+
+<p>The above is very poorly written but it is just meant to be a self-reminder not to go through that process again!</p>
+
+<h2>Assets</h2>
+
+<p><a href="https://github.com/neilorangepeel/Free-Social-Icons">https://github.com/neilorangepeel/Free-Social-Icons</a></p>
+
+<h2>Research</h2>
+
+<p><a href="http://www.sitepoint.com/use-svg-image-sprites/">http://www.sitepoint.com/use-svg-image-sprites/</a></p>
+]]></content>
+  </entry>
+  
+</feed>

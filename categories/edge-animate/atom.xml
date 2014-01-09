@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: edge-animate | ]]></title>
+  <link href="/categories/edge-animate/atom.xml" rel="self"/>
+  <link href="/"/>
+  <updated>2014-01-09T20:51:45+00:00</updated>
+  <id>/</id>
+  <author>
+    <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
+    
+  </author>
+  <generator uri="https://github.com/recurser/jekyll-plugins">Recurser</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Workflow tips for Edge Animate]]></title>
+    <link href="/edge-animate/2013/12/13/edge-animate-tips.html"/>
+    <updated>2013-12-13T00:00:00+00:00</updated>
+    <id>/edge-animate/2013/12/13/edge-animate-tips</id>
+    <content type="html"><![CDATA[<ul>
+<li>When entering text into the (horrifically basic) text input dialogue, on my keyboard, pressing the main Enter button adds a new line. Pressing the Enter button on the number pad shuts the input dialogue, saving my hand a trip to the mouse.</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bugs and improvements to Edge Animate]]></title>
+    <link href="/edge-animate/2013/12/13/edge-animate-improvements.html"/>
+    <updated>2013-12-13T00:00:00+00:00</updated>
+    <id>/edge-animate/2013/12/13/edge-animate-improvements</id>
+    <content type="html"><![CDATA[<p>This document blah, blah excerpt.</p>
+
+<h2>Improvements</h2>
+
+<ul>
+<li>When you duplicate a symbol, the new symbol as a new number appended to it e.g. &quot;_1&quot;. I have to reselect that item in the library, right click and select Rename to give it the name I want. It would be better to leave a duplicated item name selected so I can change the name in one step if I need.</li>
+</ul>
+
+<h2>Bugs</h2>
+
+<ul>
+<li>If I move an item about the page and a keyframe is added to the timeline, the element will return 0 for CSS values like top or left. I have to remove the keyframe and then the element returns the correct value.</li>
+</ul>
+]]></content>
+  </entry>
+  
+</feed>

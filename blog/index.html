@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
-        <title>Patrick Grey: websites.</title>
+        <title>Patrick Grey: blog.</title>
 
 
         <meta name="description" content="Portfolio site of Patrick Grey: web developer, e-learning specialist and connoisseur of cheap beer." />
@@ -100,8 +100,8 @@
                         <!-- escape character used instead of dash to avoid e and learning ending up on different lines. -->
                         <li class="elearning "><a href="/elearning.html">E&#8209;learning</a></li>
                         <li class="webapps "><a href="/webapps.html">Web Apps</a></li>
-                        <li class="websites navigation-active"><a class="websites-link" href="/websites.html">Websites</a></li>
-                        <li class="blog "><a href="/blog/index.html">Blog</a></li>
+                        <li class="websites "><a class="websites-link" href="/websites.html">Websites</a></li>
+                        <li class="blog navigation-active"><a href="/blog/index.html">Blog</a></li>
 
                     </ul>
 
@@ -118,48 +118,168 @@
 
                         <div role="main" class="main">
 
-                <div class="about-patrick main-section-no-top">
+                <div class="about-patrick main-section-no-top blog-post-list">
                     <div class="main-section-inner">
 
-                    <h2>Websites</h2>
-                    <p>Hello! I've been designing and developing <a href="#website">websites</a> that communicate, effective <a href="#elearning">e&#8209;learning</a> and really useful <a href="#webapp">web applications</a> since 2001.</p>
-                    <p>If you need a Scottish ginger who loves his job and will discuss your project in plain English, <a href="#contact" title="Go to contact links.">please get in touch</a>.</p>
-                    <!-- <p>I love all aspects of front-end development and dabble with the server side stuff. </p> -->
+                    <h2>Blog</h2>
+                    <ul class="blog-post-links">
+
+                        <!-- Note, should blog links show categories? -->
+
+                        
+<div class="pagination"><p>
+  
+    <span>&laquo; Prev</span>
+  
+
+  
+    
+      <em>1</em>
+    
+  
+    
+      <a href="/blog/page2">2</a>
+    
+  
+    
+      <a href="/blog/page3">3</a>
+    
+  
+
+  
+    <a href="/blog/page2">Next &raquo;</a>
+  
+</p></div>
+
+
+
+
+
+
+
+<li class="blog-post-link">
+    <h3><a href="/workflow/2013/12/19/workflow-workflow.html">IE8 Workflow</a></h3>
+    <small class="blog-post-link-date">19 December 2013</small>
+    <p>I was using IETester which was fine for a while but would crash with the slightest problem on the page. At least this let me know something was wrong but not much help in debugging.</p>
+
+
+</li>
+
+<li class="blog-post-link">
+    <h3><a href="/workflow/2013/12/19/workflow-ie8-testing.html">Workflow for testing websites in IE8</a></h3>
+    <small class="blog-post-link-date">19 December 2013</small>
+    <p>I was using IETester which was fine for a while but would crash with the slightest problem on the page. At least this let me know something was wrong but not much help in debugging.</p>
+
+
+</li>
+
+<li class="blog-post-link">
+    <h3><a href="/task/2013/12/19/task-tasks.html">About tasks</a></h3>
+    <small class="blog-post-link-date">19 December 2013</small>
+    <p>I want to better structure my workflow.</p>
+
+
+</li>
+
+
+
+
+
+
+<div class="pagination"><p>
+  
+    <span>&laquo; Prev</span>
+  
+
+  
+    
+      <em>1</em>
+    
+  
+    
+      <a href="/blog/page2">2</a>
+    
+  
+    
+      <a href="/blog/page3">3</a>
+    
+  
+
+  
+    <a href="/blog/page2">Next &raquo;</a>
+  
+</p></div>
+
+
+
+
+                        <!--
+                            I initially wanted to use Jekyll Pagination but couldn't get that to work.
+                            It was really buggy, Paginator variable was empty and, even though the page number pages were created,
+                            they had the wrong number of posts in them and the same posts in each page.
+
+                            Until I can get that working, the desktop solution is to list all blogs but only show excerpts for the first 10 or so, then show links for the rest.
+
+                            For mobile, this creates too long a list and hides the Categories and Archive lists. In this case I will hide all posts after 20. I wanted to have a CSS only show hide toggle button but that is a hack and unreliable it seems.
+
+                            Note this should be temporary until pagination is fixed.
+                         -->
+
+                    </ul>
 
                     </div>
                 </div>
 
-                <aside class="work-examples main-section" role="complementary">
+                <aside class="work-examples main-section blog-category-tags" role="complementary">
 
                     <div class="main-section-inner">
 
-                        <h2>Recent Website Projects</h2>
-                        <!-- Some lovely nav action herer: http://skinnyties.com/ -->
+                        <h2>Categories</h2>
+                        <!--
+                            http://docs.shopify.com/themes/liquid-basics/output#last
+                            http://docs.shopify.com/themes/liquid-basics/logic
+                            http://jekyllrb.com/docs/templates/
+                            https://github.com/recurser/jekyll-plugins
+
+                         -->
+                        <p>
+                        
+
+                            
+
+                                <a href="categories/edge-animate/"  title="Category: edge-animate">edge-animate</a>,&nbsp;
+
+                            
+                            <!-- Need to chec if last and not add comma - or check if first and add comma after -->
+                        
+
+                            
+
+                                <a href="categories/task/"  title="Category: task">task</a>,&nbsp;
+
+                            
+                            <!-- Need to chec if last and not add comma - or check if first and add comma after -->
+                        
+
+                            
+
+                                <a href="categories/workflow/"  title="Category: workflow">workflow</a>
+
+                            
+                            <!-- Need to chec if last and not add comma - or check if first and add comma after -->
+                        
+                        </p>
+
+                    </div>
+
+                    <div class="main-section-inner">
+
+                        <h2>Archive</h2>
                         <ul class="examples">
                             <li id="website" class="example-website">
-                                <a href="nmo-atfcm-case-study.html" title="Select to see a short case study of the new website.">
-                                    <h3 class="examples-thumbnail example-pg">patrickgrey.co.uk</h3>
-                                    <p>High-performance mobile friendly personal website.</p>
-                                </a>
+                                <a href="nmo-atfcm-case-study.html" title="">Arch</a>
                             </li>
-                            <li id="elearning" class="example-website">
-                                <a href="nmo-atfcm-case-study.html" title="Select to see a short case study of the NMO ATFCM Intro e-learning Project.">
-                                    <h3 class="examples-thumbnail example-nmo">ATFCM E-learning</h3>
-                                    <p>Mobile friendly built with Adobe Edge Animate.</p>
-                                </a>
-                            </li>
-                            <li id="website" class="example-website">
-                                <a href="flight-plan-guide-case-study.html" title="Select to see a short case study of the Flight Plan Guide Project.">
-                                    <h3 class="examples-thumbnail example-fple">Flight Plan Guide</h3>
-                                     <p>A responsive web application that works offline.</p>
-                                </a>
-                            </li>
-                            <li class="example-website">
-                                <a href="flight-plan-guide-case-study.html" title="Select to see a short case study of the Headings Tutor game.">
-                                    <h3 class="examples-thumbnail example-ht">Headings Game</h3>
-                                     <p>An HTML5 canvas game built using createJS.</p>
-                                </a>
-                            </li>
+
                         </ul>
 
                     </div>
@@ -171,53 +291,6 @@
 
 
 
-            
-            <aside class="recent-blogs main-section" role="complementary">
-                    <div class="main-section-inner">
-
-                            <h2>Recent Posts</h2>
-                            <ul class="blog-post-links">
-
-                                
-                                <li class="blog-post-link">
-                                    <h3><a href="/workflow/2013/12/19/workflow-workflow.html">IE8 Workflow</a></h3>
-                                    <small class="blog-post-link-date">19 December 2013</small>
-                                    <p>I was using IETester which was fine for a while but would crash with the slightest problem on the page. At least this let me know something was wrong but not much help in debugging.</p>
-
-                                </li>
-                                
-                                <li class="blog-post-link">
-                                    <h3><a href="/workflow/2013/12/19/workflow-ie8-testing.html">Workflow for testing websites in IE8</a></h3>
-                                    <small class="blog-post-link-date">19 December 2013</small>
-                                    <p>I was using IETester which was fine for a while but would crash with the slightest problem on the page. At least this let me know something was wrong but not much help in debugging.</p>
-
-                                </li>
-                                
-                                <li class="blog-post-link">
-                                    <h3><a href="/task/2013/12/19/task-tasks.html">About tasks</a></h3>
-                                    <small class="blog-post-link-date">19 December 2013</small>
-                                    <p>I want to better structure my workflow.</p>
-
-                                </li>
-                                
-                                <li class="blog-post-link">
-                                    <h3><a href="/task/2013/12/19/task-svg-logo.html">Create a SVG Logo with png fallback</a></h3>
-                                    <small class="blog-post-link-date">19 December 2013</small>
-                                    <p>This is the excerpt!</p>
-                                </li>
-                                
-                                <li class="blog-post-link">
-                                    <h3><a href="/task/2013/12/19/task-svg-icons.html">Create SVG icons using a spritesheet and with png fallback</a></h3>
-                                    <small class="blog-post-link-date">19 December 2013</small>
-                                    <p>This is the excerpt!</p>
-                                </li>
-                                
-
-                            </ul>
-
-                    </div>
-
-            </aside>
             
 
 
@@ -260,8 +333,8 @@
                         <!-- escape character used instead of dash to avoid e and learning ending up on different lines. -->
                         <li class="elearning "><a href="/elearning.html">E&#8209;learning</a></li>
                         <li class="webapps "><a href="/webapps.html">Web Apps</a></li>
-                        <li class="websites navigation-active"><a class="websites-link" href="/websites.html">Websites</a></li>
-                        <li class="blog "><a href="/blog/index.html">Blog</a></li>
+                        <li class="websites "><a class="websites-link" href="/websites.html">Websites</a></li>
+                        <li class="blog navigation-active"><a href="/blog/index.html">Blog</a></li>
                     </ul>
 
                 </nav>
